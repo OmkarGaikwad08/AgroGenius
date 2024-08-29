@@ -1,0 +1,71 @@
+2024-04-11 12:13:45,389 WARNING:  * Debugger is active!
+2024-04-11 12:13:45,396 INFO:  * Debugger PIN: 119-051-654
+2024-04-11 12:13:45,413 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:45] "GET /login HTTP/1.1" 200 -
+2024-04-11 12:13:49,696 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-04-11 12:13:49,715 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:13:49,723 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:49] "GET /dashboard HTTP/1.1" 200 -
+2024-04-11 12:13:49,919 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:49] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:13:49,919 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:49] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:13:50,925 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:50] "GET /npk HTTP/1.1" 200 -
+2024-04-11 12:13:50,963 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:50] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:13:50,964 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:50] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2000.47.32_388845d2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:13:56,105 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:13:56,106 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:56] "POST /dashboard HTTP/1.1" 200 -
+2024-04-11 12:13:56,148 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:56] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:13:56,150 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:56] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:13:58,309 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:58] "GET /npk HTTP/1.1" 200 -
+2024-04-11 12:13:58,345 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:58] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:13:58,348 INFO: 127.0.0.1 - - [11/Apr/2024 12:13:58] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2000.47.32_388845d2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:14:01,503 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:14:01,503 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:01] "POST /dashboard HTTP/1.1" 200 -
+2024-04-11 12:14:01,540 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:01] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:14:01,543 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:01] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:14:12,543 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:12] "GET /npk HTTP/1.1" 200 -
+2024-04-11 12:14:12,576 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:12] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:14:12,584 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:12] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2000.47.32_388845d2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:14:36,633 INFO:  * Detected change in 'C:\\Users\\omkar\\OneDrive\\Desktop\\app\\app.py', reloading
+2024-04-11 12:14:41,122 WARNING:  * Debugger is active!
+2024-04-11 12:14:41,135 INFO:  * Debugger PIN: 119-051-654
+2024-04-11 12:14:41,179 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:41] "GET /npk HTTP/1.1" 200 -
+2024-04-11 12:14:41,439 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:41] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:14:41,447 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:41] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2000.47.32_388845d2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:14:44,098 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:14:44,103 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:44] "POST /dashboard HTTP/1.1" 200 -
+2024-04-11 12:14:44,150 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:44] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:14:44,164 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:44] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:14:46,066 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:46] "GET /weather HTTP/1.1" 200 -
+2024-04-11 12:14:46,107 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:46] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:14:48,898 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:48] "GET /npk HTTP/1.1" 200 -
+2024-04-11 12:14:48,944 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:48] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:14:48,950 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:48] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2000.47.32_388845d2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:14:55,081 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:55] "[32mPOST /npks HTTP/1.1[0m" 302 -
+2024-04-11 12:14:55,099 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:14:55,100 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:55] "GET /dashboard HTTP/1.1" 200 -
+2024-04-11 12:14:55,146 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:55] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:14:55,149 INFO: 127.0.0.1 - - [11/Apr/2024 12:14:55] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:18:35,480 INFO:  * Detected change in 'C:\\Users\\omkar\\OneDrive\\Desktop\\app\\app.py', reloading
+2024-04-11 12:18:41,569 WARNING:  * Debugger is active!
+2024-04-11 12:18:41,586 INFO:  * Debugger PIN: 119-051-654
+2024-04-11 12:20:19,110 INFO:  * Detected change in 'C:\\Users\\omkar\\OneDrive\\Desktop\\app\\app.py', reloading
+2024-04-11 12:20:25,455 WARNING:  * Debugger is active!
+2024-04-11 12:20:25,470 INFO:  * Debugger PIN: 119-051-654
+2024-04-11 12:20:28,397 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:20:28,406 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:28] "GET /dashboard HTTP/1.1" 200 -
+2024-04-11 12:20:28,602 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:28] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:20:28,604 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:28] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:20:29,524 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:29] "GET /npk HTTP/1.1" 200 -
+2024-04-11 12:20:29,578 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:29] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:20:29,579 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:29] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2000.47.32_388845d2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:20:32,432 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:20:32,433 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:32] "POST /dashboard HTTP/1.1" 200 -
+2024-04-11 12:20:32,473 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:32] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:20:32,483 INFO: 127.0.0.1 - - [11/Apr/2024 12:20:32] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:22:03,828 INFO: 127.0.0.1 - - [11/Apr/2024 12:22:03] "GET /npk HTTP/1.1" 200 -
+2024-04-11 12:22:03,872 INFO: 127.0.0.1 - - [11/Apr/2024 12:22:03] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:22:03,877 INFO: 127.0.0.1 - - [11/Apr/2024 12:22:03] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2000.47.32_388845d2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:22:08,250 INFO: 127.0.0.1 - - [11/Apr/2024 12:22:08] "[32mPOST /npks HTTP/1.1[0m" 302 -
+2024-04-11 12:22:08,270 ERROR: Error making crop prediction: could not convert string to float: 'sandy'
+2024-04-11 12:22:08,271 INFO: 127.0.0.1 - - [11/Apr/2024 12:22:08] "GET /dashboard HTTP/1.1" 200 -
+2024-04-11 12:22:08,319 INFO: 127.0.0.1 - - [11/Apr/2024 12:22:08] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-04-11 12:22:08,322 INFO: 127.0.0.1 - - [11/Apr/2024 12:22:08] "[36mGET /static/WhatsApp%20Image%202024-04-08%20at%2001.13.24_828a33c2.jpg HTTP/1.1[0m" 304 -
+2024-04-11 12:24:05,596 INFO:  * Detected change in 'C:\\Users\\omkar\\OneDrive\\Desktop\\app\\app.py', reloading

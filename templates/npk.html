@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NPK</title>
+    <script
+      src="https://kit.fontawesome.com/7467921fe1.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      nav {
+        background-color: rgb(194, 243, 237);
+        overflow: hidden;
+      }
+
+      .weather-container {
+        margin-top: 50px;
+      }
+      h1 {
+        color: #48bb78;
+      }
+      h2 {
+        color: #48bb78;
+      }
+      form {
+        margin-top: 20px;
+      }
+      label {
+        font-weight: bold;
+        color: #000000;
+      }
+      input[type="text"],
+      input[type="radio"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+      }
+      button[type="submit"] {
+        padding: 8px 20px;
+        background-color: #48bb78;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button[type="submit"]:hover {
+        background-color: #38a169;
+      }
+      .toggle-buttons {
+        display: inline-block;
+      }
+      .toggle-buttons label {
+        display: inline-block;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .toggle-buttons input[type="radio"] {
+        display: none;
+      }
+      .toggle-buttons input[type="radio"]:checked + label {
+        background-color: #48bb78;
+        color: #fff;
+      }
+      .sensor-fields,
+      .soil-fields {
+        display: none;
+      }
+      /* Custom styling for dropdown menu */
+      .custom-dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .custom-dropdown select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: #f2f2f2;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+      .custom-dropdown select:focus {
+        outline: none;
+      }
+      .custom-dropdown::after {
+        content: "\25BC";
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      .sidebar {
+        width: 20%;
+        height: 100vh;
+        background: #2d2d2d; /* Dark background color for dark mode */
+        color: #ffffff; /* Text color for dark mode */
+        float: left;
+        padding-top: 50px; /* Adjusted padding top to match the weather container */
+        transition: width 0.3s ease-in-out; /* Add transition for width */
+        overflow: hidden; /* Hide overflow content */
+      }
+
+      .sidebar {
+        width: 60px;
+        height: 100vh;
+        background: #2d2d2d;
+        color: #ffffff;
+        float: left;
+        padding-top: 50px;
+        transition: width 0.3s ease-in-out;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sidebar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .sidebar a span {
+        display: none;
+        margin-left: 10px;
+      }
+
+      .sidebar a i {
+        font-size: 24px;
+      }
+
+      .sidebar:hover {
+        width: 200px;
+      }
+
+      .sidebar:hover a span {
+        display: inline;
+      }
+
+      .sidebar a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .logo {
+        float: left;
+      }
+      .logo img {
+        margin-left: 20%;
+        margin-top: 8%;
+        margin-bottom: 5%;
+        height: 55px; /* Adjust height as needed */
+        /* Adjust padding as needed */
+        width: auto;
+        border-radius: 3rem;
+      }
+      .logo img:hover {
+        box-shadow: 9px 8px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Clearfix for float clearing */
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      /* Additional styles for the weather-container and its content */
+      .weather-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .but {
+        background-color: #48bb78;
+        color: aliceblue;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 10px;
+      }
+      .but:hover {
+        background-color: #38a169;
+      }
+      select {
+        width: 200px;
+      }
+      .logout {
+        float: right;
+        margin-top: 2%;
+      }
+      .soil-types {
+        padding: 5%;
+      }
+      .soil-types img {
+        border-radius: 2rem;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 100%; /* Adjust width for smaller screens */
+        }
+        .weather-container {
+          width: 100%; /* Adjust width for smaller screens */
+          margin-left: 0; /* Remove margin on smaller screens */
+        }
+      }
+      .logout {
+        float: right;
+        margin: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="./dashboard">
+          <img
+            src="{{ url_for('static', filename='../static/logo2.png') }}"
+            alt="Logo"
+          />
+        </a>
+      </div>
+
+      <div class="logout">
+        <a href="/logout" class="but">Logout</a>
+      </div>
+    </nav>
+    <div class="both">
+      <div class="sidebar">
+        <a href="/dashboard">
+          <i class="fas fa-home"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="/weather">
+          <i class="fas fa-cloud"></i>
+          <span>Location</span>
+        </a>
+        <a href="/npk">
+          <i class="fas fa-leaf"></i>
+          <span>NPK</span>
+        </a>
+      </div>
+    </div>
+    <div class="weather-container">
+      <h1>Welcome to AgroGenius {{ username }}</h1>
+      <h2>Do You have NPK sensor?</h2>
+      <div class="toggle-buttons">
+        <input type="radio" id="yes" name="sensor" value="yes" />
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="sensor" value="no" />
+        <label for="no">No</label>
+      </div>
+      <form id="sensorForm" class="sensor-fields" action="/npks" method="post">
+        <label for="nitrogen">Nitrogen:</label>
+        <input type="text" id="nitrogen" name="nitrogen" />
+        <label for="phosphorus">Phosphorus:</label>
+        <input type="text" id="phosphorus" name="phosphorus" />
+        <label for="potassium">Potassium:</label>
+        <input type="text" id="potassium" name="potassium" />
+        <button type="submit">Submit</button>
+      </form>
+      <form id="soilForm" class="soil-fields" action="/stok" method="post">
+        <label for="soilType">Soil Type:</label>
+        <div class="custom-dropdown">
+          <select class="select" id="soilType" name="soilType">
+            <option value="5">Sandy Soil</option>
+            <option value="6">Silt Soil</option>
+            <option value="2">Clay Soil</option>
+            <option value="3">Loamy Soil</option>
+            <option value="1">Chalk Soil</option>
+            <option value="4">Peaty Soil</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+        <div class="soil-types">
+          <img
+            src="{{ url_for('static', filename='../static/WhatsApp Image 2024-04-08 at 00.47.32_388845d2.jpg') }}"
+            alt="Logo"
+          />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Your JavaScript code here
+      var toggleButtons = document.querySelectorAll(
+        '.toggle-buttons input[type="radio"]'
+      );
+      toggleButtons.forEach(function (button) {
+        button.addEventListener("change", function () {
+          var sensorFields = document.querySelector(".sensor-fields");
+          var soilFields = document.querySelector(".soil-fields");
+          if (this.value === "yes") {
+            sensorFields.style.display = "block";
+            soilFields.style.display = "none";
+          } else {
+            sensorFields.style.display = "none";
+            soilFields.style.display = "block";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

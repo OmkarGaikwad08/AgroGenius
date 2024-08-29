@@ -1,0 +1,182 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #18181d;
+}
+
+h1,
+.hero-heading,
+.common-heading {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #18181d;
+}
+
+h2 {
+  font-size: 4.4rem;
+  font-weight: 300;
+  color: #18181d;
+  white-space: normal;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #18181d;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #18181d;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/* Header */
+.main-header {
+  height: 10rem;
+  background-color: #c2f3ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: auto;
+  max-width: 30%;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-list li {
+  list-style: none;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #212529;
+  transition: color 0.3s linear;
+}
+
+.navbar-list li a:hover {
+  color: #588157;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.menuIcon {
+  display: flex;
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 9rem 0;
+}
+
+.section-hero-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-top-data {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #588157;
+}
+
+.hero-para {
+  margin-top: 1.5rem;
+  margin-bottom: 3.4rem;
+  max-width: 60rem;
+}
+
+.section-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  max-width: 60%;
+  border-radius: 8px;
+  box-shadow: 9px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Feedback Section */
+.feedback-section {
+  padding: 9rem 0 8rem 0;
+}
+
+.contact-form {
+  max-width: 50rem;
+  margin: auto;
+}
+
+.contact-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contact-inputs input[type="text"],
+.contact-inputs input[type="email"],
+.contact-inputs textarea {
+  max-width: 100%;
+  color: #18181d;
+  padding: 1.6rem 2.4rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-inputs input[type="submit"] {
+  max-width: 16rem;
+  margin-top: 2rem;
+  background-color: #3a5a40;
+  color: #fff;
+  padding: 1.4rem 2.2rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* About Section */
+.about-section {
+  padding: 9rem 0 8rem 0;
+}

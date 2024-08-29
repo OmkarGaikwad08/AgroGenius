@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <style>
+      /* CSS styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+      }
+
+      h1 {
+        color: #000;
+        font-size: 6rem;
+        font-weight: 900;
+      }
+
+      h2 {
+        color: #000;
+        font-size: 4.4rem;
+        font-weight: 300;
+        white-space: normal;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      p {
+        color: #000;
+        opacity: 0.7;
+        font-size: 1.65rem;
+        line-height: 1.5;
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .navbar {
+        padding: 1rem 0;
+        text-align: center;
+        display: flex; /* Change to flex container */
+        justify-content: space-between; /* Distribute items along the main axis */
+        align-items: center; /* Align items vertically */
+        background-color: rgb(194, 243, 237);
+        overflow: hidden;
+      }
+
+      .navbar-list li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .navbar-list li:last-child {
+        margin-right: 0;
+      }
+
+      .navbar-list a {
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+      }
+
+      .navbar-list {
+        gap: 1 rem;
+        margin-right: 20px;
+        li {
+          list-style: none;
+          .navbar-link {
+            justify-content: end;
+            &:link,
+            &:visited {
+              display: inline-block;
+              text-decoration: none;
+              font-size: 1.8rem;
+              text-transform: uppercase;
+              color: #212529;
+              transition: color 0.3s linear;
+            }
+
+            &:hover,
+            &:active {
+              color: #588157;
+            }
+          }
+        }
+      }
+
+      .navbar-list {
+        font-family: "Titillium Web";
+        text-transform: uppercase;
+        text-align: center;
+        justify-content: end;
+        font-weight: 600;
+      }
+
+      .navbar-list * {
+        box-sizing: border-box;
+        transition: all 0.35s ease;
+      }
+
+      .navbar-list li {
+        display: inline-block;
+        list-style: outside none none;
+        margin: 0.5em 1em;
+        padding: 0;
+      }
+
+      .navbar-list a {
+        padding: 0.5em 0.8em;
+        color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .navbar-list a::before,
+      .navbar-list a::after {
+        content: "";
+        height: 14px;
+        width: 14px;
+        position: absolute;
+        transition: all 0.35s ease;
+        opacity: 0;
+      }
+
+      .navbar-list a::before {
+        content: "";
+        right: 0;
+        top: 0;
+        border-top: 3px solid #3e8914;
+        border-right: 3px solid #2e640f;
+        transform: translate(-100%, 50%);
+      }
+
+      .navbar-list a:after {
+        content: "";
+        left: 0;
+        bottom: 0;
+        border-bottom: 3px solid #2e640f;
+        border-left: 3px solid #3e8914;
+        transform: translate(100%, -50%);
+      }
+
+      .navbar-list a:hover:before,
+      .navbar-list a:hover:after {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      .navbar-list a:hover {
+        color: #3da35d;
+      }
+
+      .container1 {
+        max-width: 120rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .hero-section {
+        padding: 5rem 5rem;
+      }
+
+      .hero-content {
+        max-width: 45%;
+      }
+
+      .hero-image {
+        max-width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-image img {
+        max-width: 70%;
+        border-radius: 8px;
+        box-shadow: 9px 8px 16px rgba(0, 0, 0, 0.4);
+      }
+      button {
+        background-color: #48bb78;
+        color: #111827;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 10px;
+      }
+      button:hover {
+        background-color: #38a169;
+      }
+
+      .logo img {
+        margin-left: 10px;
+        margin-top: 8%;
+        margin-bottom: 5%;
+        height: 55px;
+        width: auto;
+        border-radius: 3rem;
+      }
+
+      .logo img:hover {
+        box-shadow: 9px 8px 16px rgba(0, 0, 0, 0.4);
+      }
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .footer .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .footer-center {
+        flex: auto;
+      }
+
+      .footer h3 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .footer p {
+        margin: 8px 0;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+      }
+
+      .social-icons li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .social-icons li:last-child {
+        margin-right: 0;
+      }
+
+      .social-icons a {
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .social-icons a:hover {
+        color: #3da35d;
+      }
+
+      .copyright {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      .hiw {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 3 columns */
+        gap: 20px; /* Gap between grid items */
+        padding: 10rem;
+        background-color: #588157;
+      }
+      .hiw h1 {
+        align-content: space-evenly;
+      }
+      .step {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .footer-center p {
+        color: #f9f9f9;
+      }
+
+      .step h2 {
+        font-size: 2em;
+        color: #333;
+      }
+      .step p {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">
+          <img
+            src="{{ url_for('static', filename='../static/logo2.png') }}"
+            alt="Logo"
+          />
+        </a>
+      </div>
+      <ul class="navbar-list">
+        <li><a class="navbar-link" href="#how-it-works">How it works?</a></li>
+        <li><a class="navbar-link" href="./about">About</a></li>
+        <li><a class="navbar-link" href="./feedback">Feedback</a></li>
+        <button onclick="window.location.href='./login'">Login</button>
+        <button onclick="window.location.href='./signup'">Signup</button>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container1">
+        <div class="hero-content">
+          <p class="hero-top-data">Hello</p>
+          <h1 class="hero-heading">AgroGenius</h1>
+          <p class="hero-para">
+            Your intelligent farming companion. Receive personalized crop
+            recommendations based on your location, soil type, and preferences.
+            Track performance metrics and access expert insights for optimized
+            yields. Start making informed farming decisions with AgroGenius
+            today.
+          </p>
+          <button class="btn" onclick="window.location.href='./signup'">
+            Get Started
+          </button>
+        </div>
+        <div class="hero-image">
+          <img
+            src="{{ url_for('static', filename='../static/crop3.jpg') }}"
+            alt="Logo"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="hiw">
+      <h1>How It Works ?</h1>
+      <div class="step">
+        <h2>Step 1: Login/Signup</h2>
+        <p>Signup or login into preferred account.</p>
+      </div>
+      <div class="step">
+        <h2>Step 2: Select Location</h2>
+        <p>Select the city where crop is going to be cultivated.</p>
+      </div>
+      <div class="step">
+        <h2>Step 3: If NPK sensor available</h2>
+        <p>Select Yes in the Soil tab and put NPK values.</p>
+      </div>
+      <div class="step">
+        <h2>Step 4: If NPK sensor is not available</h2>
+        <p>
+          Select No in the Soil tab and select soil type from drop down menu.
+        </p>
+      </div>
+      <div class="step">
+        <h2>Step 5: Predict</h2>
+        <p>
+          After Clicking on submit button it will take you to dashboard for crop
+          prediction.
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-center">
+            <h3>Contact Us</h3>
+            <p>Email: help.agrogenius@gmail.com</p>
+            <p>Phone: +91 xxxxxxxxxx</p>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2024 AgroGenius. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
